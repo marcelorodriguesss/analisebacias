@@ -1,0 +1,8 @@
+libgeos++-dev
+libproj-dev
+proj-bin
+proj-data
+build-essential
+netcdf-bin
+libnetcdf-dev
+libnetcdff-dev

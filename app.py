@@ -2,12 +2,14 @@ import streamlit as st
 
 import src.pages.accum_mon
 import src.pages.annual
+import src.pages.map
 
 PAGES = {
     # "Home": src.pages.home,
     # "Raw Data": src.pages.dashboard,
-    "Acumulado Anual": src.pages.annual,
-    "Acumulado Mensal": src.pages.accum_mon,
+    "Acumulado Anual Bacias": src.pages.annual,
+    "Acumulado Mensal Bacias": src.pages.accum_mon,
+    "Acumulado Médio Anual Mapas": src.pages.map,
     # "Contribute": src.pages.contribute
 }
 

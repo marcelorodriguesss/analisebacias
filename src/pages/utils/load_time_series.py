@@ -8,7 +8,7 @@ from src.pages.utils.data import dbobs_names
 def load_time_series(start_date: str = '1981-01', end_date:str = '2016-12') -> pd.DataFrame:
     dfs = pd.DataFrame()
     for n in dbobs_names():
-        csv_file = f'{n}_bacias.csv'
+        csv_file = f'data/month/{n}_bacias.csv'
         df = pd.read_csv(csv_file, sep=';')
         df['OBS'] = n.upper()
         df['date'] = pd.to_datetime(df['date'], format="%Y/%m/%d")

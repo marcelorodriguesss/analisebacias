@@ -3,13 +3,12 @@ import cartopy as cart
 import streamlit as st
 import matplotlib.pyplot as plt
 from matplotlib.colors import BoundaryNorm, ListedColormap
-# from xarray.core.dataset import DataVariables
 from typing import List
 
 from src.pages.utils.data import dbobs_names
 
-def read_nc(dbobs_name):
-    nc_file = f'data/annual/{dbobs_name}.precip.1981-2016.clim_annual.nc'
+def read_nc(dbobs_name: str, metric: str):
+    nc_file = f'data/annual/{dbobs_name}.precip.1981-2016.{metric}_annual.nc'
     with xr.open_dataset(nc_file) as dset:
         return dset
 
@@ -18,14 +17,24 @@ def plotmap(arr, lon, lat, fig_title, pal='anom'):
     fig_map = plt.figure(figsize=(10, 7))
     proj = cart.crs.PlateCarree(central_longitude=0)  # -156
     ax = plt.axes(projection=proj)
-    if pal == 'anom':
-        pal = ['#000044', '#0033FF', '#007FFF', '#0099FF', '#00B2FF',
-               '#00CCFF', '#FFFFFF', '#FFCC00', '#FF9900', '#FF7F00',
-               '#FF3300', '#A50000', '#B48C82']
-        clevs = [-3., -2.5, -2., -1.5, -1., -0.5, 0.5, 1., 1.5, 2., 2.5, 3.]
-        orient = 'horizontal'
-        shrink=1.
-        aspect=35
+    ax.add_feature(cart.feature.OCEAN, zorder=50, edgecolor='k', facecolor='white')
+    if pal == 'std':
+        # pal = ['#000044', '#0033FF', '#007FFF', '#0099FF', '#00B2FF',
+        #        '#00CCFF', '#FFFFFF', '#FFCC00', '#FF9900', '#FF7F00',
+        #        '#FF3300', '#A50000', '#B48C82']
+        # clevs = [-3., -2.5, -2., -1.5, -1., -0.5, 0.5, 1., 1.5, 2., 2.5, 3.]
+        # pal = ['#5B51A0', '#3388BB', '#64BAAC', '#AADDA7', '#EBFC99',
+            #    '#FFFFC4', '#FEDD8A', '#FFAD61', '#F06F48', '#DD3445',
+            #    '#990242']
+        pal = ['#C0B4FF', '#8070EB', '#483CC8', '#2D1EA5', '#1464D2',
+               '#2882F0', '#96D2FA', '#FFFAAA', '#FFC03C', '#FFA000',
+               '#FF6000', '#E11400', '#A50000', '#F0DCD2', '#B48C82',
+               '#785046'] 
+        # clevs = [0, 50, 100, 150, 200, 250, 300, 350, 400, 450, 500, 550, 600, 650, 700]
+        clevs = list(range(0, 701, 50))
+        orient = 'vertical'
+        shrink=0.9
+        aspect=24
     elif pal == 'diff':
         pal = ('#0033FF', '#0099FF', '#FFFFFF', '#FFCC00', '#FF3300')
         clevs = [-1., -0.05, 0.05, 1.]
@@ -110,14 +119,15 @@ def plotmap(arr, lon, lat, fig_title, pal='anom'):
 
 def main():
     obs_names: List[str] = dbobs_names()
+    metric = st.sidebar.radio('Metric:', ('Mean', 'STD'))
     with st.spinner('Rendering maps ...'):
         for obs_name in obs_names:
-            dset = read_nc(obs_name)
+            dset = read_nc(obs_name, metric.lower())
             fig = plotmap(
                 dset.precip.values[0],
                 dset.lon.values,
                 dset.lat.values,
                 obs_name.upper(),
-                pal='other'
+                pal=metric.lower()
             )
             st.write(fig)

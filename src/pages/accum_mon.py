@@ -5,10 +5,6 @@ import streamlit as st
 from src.pages.utils.load_time_series import load_time_series
 from src.pages.utils.data import basins_names
 
-def load_ts():
-    return load_time_series()
-
-
 # @st.cache
 def plot_ts(dfs, basin, start_date, end_date):
     mask = (dfs['date'] >= start_date) & (dfs['date'] <= end_date)
@@ -42,7 +38,7 @@ def plot_ts(dfs, basin, start_date, end_date):
 
 
 def main():
-    dfs = load_ts()
+    dfs = load_time_series()
     basin = st.sidebar.selectbox('Select Basin', basins_names())
     st.subheader('1981 - 2016')
     with st.spinner('Rendering charts ...'):

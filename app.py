@@ -7,9 +7,9 @@ import src.pages.map
 PAGES = {
     # "Home": src.pages.home,
     # "Raw Data": src.pages.dashboard,
-    "Acumulado Anual Bacias": src.pages.annual,
-    "Acumulado Mensal Bacias": src.pages.accum_mon,
-    "Acumulado Médio Anual Mapas": src.pages.map,
+    "Basins Total Year": src.pages.annual,
+    "Basins Total Month": src.pages.accum_mon,
+    "Maps Year Mean and STD ": src.pages.map,
     # "Contribute": src.pages.contribute
 }
 

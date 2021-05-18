@@ -2,19 +2,19 @@ from typing import List
 
 def dbobs_names():
     dbobs_names: List[str] = [
+        'referencia',
         'chirps',
         'cpc',
         'cru',
         'delaware',
         'gpcc',
-        'xavier'
-        # 'cmap',
-        # 'gpcp',
+        'xavier',
+        'cmap',
+        'gpcp',
+        'prec',
+        'precl',
         # 'merge',
-        # 'prec',
-        # 'precl',
-        # 'referencia',
-        # 'sa24',
+        # 'sa24'
     ]
     return dbobs_names
 

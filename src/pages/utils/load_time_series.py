@@ -40,4 +40,5 @@ def compute_yr_accum(start_date: str = '1981-01', end_date:str = '2016-12') -> p
         col_obs = df.pop('OBS')
         df.insert(1, 'OBS', col_obs)
         dfs = dfs.append(df)
+    
     return dfs

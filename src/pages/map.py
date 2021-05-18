@@ -131,3 +131,4 @@ def main():
                 pal=metric.lower()
             )
             st.write(fig)
+

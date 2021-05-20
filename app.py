@@ -3,10 +3,12 @@ import streamlit as st
 import src.pages.accum_mon
 import src.pages.annual
 import src.pages.map
+import src.pages.taylor
 
 PAGES = {
     # "Home": src.pages.home,
     # "Raw Data": src.pages.dashboard,
+    "Taylor Diagram": src.pages.taylor,
     "Basins Total Year": src.pages.annual,
     "Basins Total Month": src.pages.accum_mon,
     "Maps Year Mean and STD ": src.pages.map,
@@ -14,9 +16,13 @@ PAGES = {
 }
 
 def main():
+
     st.sidebar.title("Menu")
+
     choice = st.sidebar.radio("Navigate", list(PAGES.keys()))
+
     PAGES[choice].main()
+
     # st.sidebar.title("About")
     # st.sidebar.info(
     #     """
@@ -25,19 +31,8 @@ def main():
     #     """
     # )
     # st.sidebar.title("Contribute")
-    # st.sidebar.info("Feel free to contribute to this open source project. The github link can be found "
-    #                 "[here](https://github.com/Sayar1106/covid-dashboard)")
+    st.sidebar.info("Feel free to contribute to this open source project. The github link can be found "
+                    "[here](https://github.com/marcelorodriguesss/analisebacias)")
 
 if __name__ == "__main__":
     main()
-
-# from vega_datasets import data
-
-# source = data.stocks()
-
-# st.write(source)
-
-# USAR:
-# df['date'] = pd.date_range('2000-1-1', periods=200, freq='D')
-
-

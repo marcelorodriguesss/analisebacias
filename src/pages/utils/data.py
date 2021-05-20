@@ -3,12 +3,12 @@ from typing import List
 def dbobs_names():
     dbobs_names: List[str] = [
         'referencia',
+        'xavier',
         'chirps',
         'cpc',
         'cru',
         'delaware',
         'gpcc',
-        'xavier',
         'cmap',
         'gpcp',
         'prec',

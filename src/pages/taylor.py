@@ -169,7 +169,7 @@ def main():
 
             # samples = np.c_[std_bases, corr_data]
 
-            fig = plt.figure()
+            fig = plt.figure(figsize=(8, 5))
 
             dia = TaylorDiagram(stdref, fig=fig, label='reference', extend=True)
 
@@ -192,11 +192,13 @@ def main():
             fig.legend(
                 dia.samplePoints,
                 [ p.get_label() for p in dia.samplePoints ],
-                numpoints=1, prop=dict(size='small'), loc='upper right'
+                numpoints=1, prop=dict(size='8'), loc='upper right'
             )
 
-            fig.suptitle(b.upper(), size='x-large')  # Figure title
+            fig.suptitle(b.upper(), size='small')  # Figure title
 
             st.write(fig)
+
+            st.stop()
 
             plt.close()

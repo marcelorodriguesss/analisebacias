@@ -72,11 +72,11 @@ class TaylorDiagram(object):
         ax.axis["top"].major_ticklabels.set_axis_direction("top")
         ax.axis["top"].label.set_axis_direction("top")
         ax.axis["top"].label.set_text('CORRELAÇÃO')
-        ax.axis["top"].label.set_fontsize(13)
+        ax.axis["top"].label.set_fontsize(10)
 
         ax.axis["left"].set_axis_direction("bottom")  # "X axis"
         ax.axis["left"].label.set_text("DESVIO PADRÃO")
-        ax.axis["left"].label.set_fontsize(13)
+        ax.axis["left"].label.set_fontsize(10)
 
         ax.axis["right"].set_axis_direction("top")    # "Y-axis"
         ax.axis["right"].toggle(ticklabels=True)
@@ -169,9 +169,9 @@ def main():
 
             # samples = np.c_[std_bases, corr_data]
 
-            fig = plt.figure(figsize=(5, 3), dpi=500)
+            fig = plt.figure(figsize=(6, 3))
 
-            dia = TaylorDiagram(stdref, fig=fig, label='reference', extend=True)
+            dia = TaylorDiagram(stdref, fig=fig, label='reference', extend=False)
 
             dia.samplePoints[0].set_color('r')  # Mark reference point as a red star
 

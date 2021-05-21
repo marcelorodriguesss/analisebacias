@@ -5,8 +5,6 @@ import src.pages.annual
 import src.pages.map
 import src.pages.taylor
 
-st.set_page_config(layout="wide")
-
 PAGES = {
     # "Home": src.pages.home,
     # "Raw Data": src.pages.dashboard,

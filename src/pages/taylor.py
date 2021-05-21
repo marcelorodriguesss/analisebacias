@@ -210,11 +210,11 @@ def main():
             # with col2:
             st.write(fig)
 
-#             plt.savefig('taylo1.png')
+            plt.savefig('taylo1.png')
 
             plt.close()
 
-#             st.image('taylo1.png')
+            st.image('taylo1.png')
 
             st.stop()
 

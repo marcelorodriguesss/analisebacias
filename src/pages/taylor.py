@@ -174,7 +174,7 @@ def main():
 
             # samples = np.c_[std_bases, corr_data]
 
-            fig = plt.figure(figsize=(7, 5))
+            fig = plt.figure(figsize=(7, 4))
 
             dia = TaylorDiagram(stdref, fig=fig, label='reference', extend=False)
 

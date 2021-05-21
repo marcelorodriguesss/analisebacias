@@ -4,10 +4,11 @@ import src.pages.accum_mon
 import src.pages.annual
 import src.pages.map
 import src.pages.taylor
+import src.pages.correl
 
 PAGES = {
     # "Home": src.pages.home,
-    # "Raw Data": src.pages.dashboard,
+    "Correlation": src.pages.correl,
     "Taylor Diagram": src.pages.taylor,
     "Basins Total Year": src.pages.annual,
     "Basins Total Month": src.pages.accum_mon,

@@ -36,17 +36,17 @@ def main():
     st.sidebar.markdown(
         """\#|Name|Spacial Resolution|
         :---:|:---:|:---:|
-        1 | Prec | 2.5 x 2.5 |
-        2 | PrecL | 2.5 x 2.5 |
-        3 | CMAP | 2.5 x 2.5 |
-        4 | GPCP | 2.5 x 2.5 |
-        5 | GPCC | 0.5 x 0.5 |
-        6 | DELAWARE | 0.5 x  0.5 |
-        7 | CPC | 0.5 x 0.5 |
-        8 | CRU | 0.5 x 0.5 |
-        9 | XAVIER | 0.5 x 0.5 |
-        10 | REFERENCE | 0.25 x 0.25 |
-        11 | CHIRPS | 0.05 x 0.05 |
+        1 | Prec | 2.5° x 2.5° |
+        2 | PrecL | 2.5° x 2.5° |
+        3 | CMAP | 2.5° x 2.5° |
+        4 | GPCP | 2.5° x 2.5° |
+        5 | GPCC | 0.5° x 0.5° |
+        6 | DELAWARE | 0.5° x  0.5° |
+        7 | CPC | 0.5° x 0.5° |
+        8 | CRU | 0.5° x 0.5° |
+        9 | XAVIER | 0.5° x 0.5° |
+        10 | REFERENCE | 0.25° x 0.25° |
+        11 | CHIRPS | 0.05° x 0.05° |
         """
     )
     st.sidebar.markdown("""- - - - - - - - - - """)

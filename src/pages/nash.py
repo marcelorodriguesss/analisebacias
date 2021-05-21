@@ -38,6 +38,7 @@ def color_negative_red(value: float) -> str:
 def nash_sut_coef(x: np.ndarray, y: np.ndarray) -> np.ndarray:
     """
     Nash Sutcliffe efficiency coefficient
+    https://doi.org/10.1016/0022-1694(70)90255-6
 
     input:
         x: simulated
@@ -47,7 +48,7 @@ def nash_sut_coef(x: np.ndarray, y: np.ndarray) -> np.ndarray:
         ns: Nash Sutcliffe efficient coefficient
     """
 
-    return 1 - sum((x - y) ** 2) / sum((y - np.mean(y)) ** 2)
+    return 1 - sum((y - x) ** 2) / sum((y - np.mean(y)) ** 2)
 
 
 def main():
@@ -84,8 +85,6 @@ def main():
 
     st.table(pd.DataFrame(nash, index=obs_names[1:]).style.applymap(color_negative_red).format("{:.2}"))
 
-    st.stop()
-
     dfs = compute_yr_accum()
 
     nash = {}
@@ -106,7 +105,7 @@ def main():
 
             if i > 0:
 
-                d[obs] = nash_sut_coef(data[0], data[i])
+                d[obs] = nash_sut_coef(data[i], data[0])
 
         nash[b] = d
 

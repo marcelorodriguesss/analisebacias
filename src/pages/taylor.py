@@ -9,11 +9,6 @@ from matplotlib.projections import PolarAxes
 from src.pages.utils.load_time_series import load_time_series
 from src.pages.utils.data import basins_names, dbobs_names
 
-# def img_to_bytes(img_path):
-#     img_bytes = Path(img_path).read_bytes()
-#     encoded = base64.b64encode(img_bytes).decode()
-#     return encoded
-
 class TaylorDiagram(object):
     """
     Taylor diagram.

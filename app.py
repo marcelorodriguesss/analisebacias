@@ -32,12 +32,12 @@ def main():
     #     """
     # )
     # st.sidebar.title("Contribute")
-    st.sidebar.markdown("""- - - - - - - - - - """)
+    # st.sidebar.markdown("""- - - - - - - - - - """)
     st.sidebar.markdown(
         """\#|Name|Spacial Resolution|
         :---:|:---:|:---:|
-        1 | Prec | 2.5° x 2.5° |
-        2 | PrecL | 2.5° x 2.5° |
+        1 | PREC | 2.5° x 2.5° |
+        2 | PRECL | 2.5° x 2.5° |
         3 | CMAP | 2.5° x 2.5° |
         4 | GPCP | 2.5° x 2.5° |
         5 | GPCC | 0.5° x 0.5° |
@@ -49,7 +49,7 @@ def main():
         11 | CHIRPS | 0.05° x 0.05° |
         """
     )
-    st.sidebar.markdown("""- - - - - - - - - - """)
+    st.sidebar.markdown("")
     st.sidebar.info("The github link can be found "
                     "[here](https://github.com/marcelorodriguesss/analisebacias)")
 

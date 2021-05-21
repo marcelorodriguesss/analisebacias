@@ -169,7 +169,7 @@ def main():
 
             # samples = np.c_[std_bases, corr_data]
 
-            fig = plt.figure(figsize=(8, 3))
+            fig = plt.figure()  # figsize=(8, 3)
 
             dia = TaylorDiagram(stdref, fig=fig, label='reference', extend=False)
 
@@ -197,10 +197,13 @@ def main():
 
             fig.suptitle(b.upper(), size='small')  # Figure title
 
-            col1, col2= st.beta_columns((1, 2))
+            col1, col2= st.beta_columns((2, 1))
 
             with col1:
                 st.write(fig)
+
+            # with col2:
+                # st.write(fig)
 
             st.stop()
 

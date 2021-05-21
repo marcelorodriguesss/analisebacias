@@ -5,6 +5,8 @@ import src.pages.annual
 import src.pages.map
 import src.pages.taylor
 
+st.set_page_config(layout="wide")
+
 PAGES = {
     # "Home": src.pages.home,
     # "Raw Data": src.pages.dashboard,
@@ -31,7 +33,7 @@ def main():
     #     """
     # )
     # st.sidebar.title("Contribute")
-    st.sidebar.info("Feel free to contribute to this open source project. The github link can be found "
+    st.sidebar.info("The github link can be found "
                     "[here](https://github.com/marcelorodriguesss/analisebacias)")
 
 if __name__ == "__main__":

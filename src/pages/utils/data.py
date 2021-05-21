@@ -3,7 +3,7 @@ from typing import List
 def dbobs_names():
     dbobs_names: List[str] = [
         'referencia',
-        'xavier',
+        # 'xavier',
         'chirps',
         'cpc',
         'cru',

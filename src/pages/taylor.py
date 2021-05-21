@@ -202,7 +202,6 @@ def main():
 
             fig.suptitle(b.upper(), size='small')  # Figure title
 
-
             plt.savefig('taylor.png')
 
             plt.close()

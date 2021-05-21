@@ -5,10 +5,12 @@ import src.pages.annual
 import src.pages.map
 import src.pages.taylor
 import src.pages.correl
+import src.pages.nash
 
 PAGES = {
     # "Home": src.pages.home,
     "Correlation": src.pages.correl,
+    "Nash Sutcliffe Coef": src.pages.nash,
     "Taylor Diagram": src.pages.taylor,
     "Basins Total Year": src.pages.annual,
     "Basins Total Month": src.pages.accum_mon,

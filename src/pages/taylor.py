@@ -199,8 +199,8 @@ def main():
 
             col1, col2= st.beta_columns((1, 2))
 
-            # with col1:
-            st.write(fig)
+            with col1:
+                st.write(fig)
 
             st.stop()
 

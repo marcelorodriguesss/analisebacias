@@ -174,7 +174,7 @@ def main():
 
             # samples = np.c_[std_bases, corr_data]
 
-            fig = plt.figure(figsize=(7, 4))
+            fig = plt.figure(figsize=(7, 5))
 
             dia = TaylorDiagram(stdref, fig=fig, label='reference', extend=False)
 
@@ -208,13 +208,13 @@ def main():
                 # st.write(fig)
 
             # with col2:
-                # st.write(fig)
+            st.write(fig)
 
-            plt.savefig('taylo1.png')
+#             plt.savefig('taylo1.png')
 
             plt.close()
 
-            st.image('taylo1.png')
+#             st.image('taylo1.png')
 
             st.stop()
 

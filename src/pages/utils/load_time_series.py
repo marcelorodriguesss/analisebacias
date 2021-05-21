@@ -4,7 +4,7 @@ import streamlit as st
 
 from src.pages.utils.data import dbobs_names
 
-# @st.cache()
+@st.cache()
 def load_time_series(start_date: str = '1981-01', end_date:str = '2016-12') -> pd.DataFrame:
     dfs = pd.DataFrame()
     for n in dbobs_names():
@@ -17,7 +17,7 @@ def load_time_series(start_date: str = '1981-01', end_date:str = '2016-12') -> p
     return dfs
 
 
-# @st.cache()
+@st.cache()
 def compute_yr_accum(start_date: str = '1981-01', end_date:str = '2016-12') -> pd.DataFrame:
     dfs = pd.DataFrame()
     for n in dbobs_names():
@@ -40,5 +40,5 @@ def compute_yr_accum(start_date: str = '1981-01', end_date:str = '2016-12') -> p
         col_obs = df.pop('OBS')
         df.insert(1, 'OBS', col_obs)
         dfs = dfs.append(df)
-    
+
     return dfs

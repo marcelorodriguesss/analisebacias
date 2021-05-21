@@ -13,16 +13,20 @@ def color_negative_red(value):
     """
 
     if value < 0:
-        color = '#ff0219'
+        color = '#ae000c'
     elif value > 0 and value <= 0.2:
-        color = '#ff9d37'
+        color = '#ff0219'
     elif value > 0.2 and value <= 0.4:
-        color = '#fbe78a'
+        color = '#ff5f26'
     elif value > 0.4 and value <= 0.6:
+        color = '#ff9d37'
+    elif value > 0.6 and value <= 0.7:
+        color = '#fbe78a'
+    elif value > 0.7 and value <= 0.8:
         color = '#b0f0f7'
-    elif value > 0.6 and value <= 0.8:
-        color = '#4ba7ef'
-    elif value > 0.8 and value <= 1.:
+    elif value > 0.8 and value <= 0.9:
+        color = '#76bbf3'
+    elif value > 0.9 and value <= 1.:
         color = '#2372c9'
     else:
         color = 'green'

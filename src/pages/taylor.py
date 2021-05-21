@@ -9,6 +9,11 @@ from matplotlib.projections import PolarAxes
 from src.pages.utils.load_time_series import load_time_series
 from src.pages.utils.data import basins_names, dbobs_names
 
+# def img_to_bytes(img_path):
+#     img_bytes = Path(img_path).read_bytes()
+#     encoded = base64.b64encode(img_bytes).decode()
+#     return encoded
+
 class TaylorDiagram(object):
     """
     Taylor diagram.
@@ -169,7 +174,7 @@ def main():
 
             # samples = np.c_[std_bases, corr_data]
 
-            fig = plt.figure(figsize=(5, 3))
+            fig = plt.figure(figsize=(5, 4))
 
             dia = TaylorDiagram(stdref, fig=fig, label='reference', extend=False)
 
@@ -197,14 +202,19 @@ def main():
 
             fig.suptitle(b.upper(), size='small')  # Figure title
 
-            col1, col2= st.beta_columns((2, 1))
+            # col1, col2= st.beta_columns((2, 2))
 
-            with col1:
-                st.write(fig)
+            # with col1:
+                # st.write(fig)
 
             # with col2:
                 # st.write(fig)
 
-            st.stop()
+            plt.savefig('taylo1.png')
 
             plt.close()
+
+            st.image('taylo1.png')
+
+            st.stop()
+

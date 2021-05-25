@@ -181,8 +181,8 @@ def main():
                             ls='', label=name)  # mec='k', mfc='k',
 
             # Add RMS contours, and label them
-            # contours = dia.add_contours(levels=5, colors='0.5')  # 5 levels in grey
-            # plt.clabel(contours, inline=1, fontsize=10, fmt='%.0f')
+            contours = dia.add_contours(levels=5, colors='0.5')  # 5 levels in grey
+            plt.clabel(contours, inline=1, fontsize=10, fmt='%.0f')
 
             dia.add_grid()  # Add grid
 

@@ -42,7 +42,7 @@ def nash_sut_coef(x: np.ndarray, y: np.ndarray) -> np.ndarray:
 
     input:
         x: simulated
-        y: observed
+        y: observed (reference)
 
     output:
         ns: Nash Sutcliffe efficient coefficient
@@ -77,7 +77,7 @@ def main():
 
             if i > 0:
 
-                d[obs] = nash_sut_coef(data[0], data[i])
+                d[obs] = nash_sut_coef(data[i], data[0])
 
         nash[b] = d
 

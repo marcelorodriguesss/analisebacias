@@ -5,7 +5,6 @@ import streamlit as st
 from src.pages.utils.load_time_series import load_time_series
 from src.pages.utils.data import basins_names
 
-# @st.cache
 def plot_ts(dfs, basin, start_date, end_date):
     mask = (dfs['date'] >= start_date) & (dfs['date'] <= end_date)
     curr_df = dfs.loc[mask]
@@ -29,7 +28,7 @@ def plot_ts(dfs, basin, start_date, end_date):
         highlight
     ).properties(
         width=700,
-        height=250
+        height=350
     )
     lines = base.mark_line().encode(
         size=alt.condition(~highlight, alt.value(1), alt.value(3))

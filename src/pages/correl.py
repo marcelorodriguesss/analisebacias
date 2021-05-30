@@ -60,7 +60,8 @@ def main():
 
         correl[b] = corr_data.values
 
-    st.markdown('### DADOS x REFERÊNCIA - 1981-2016 - MENSAL')
+    st.markdown("#### CORRELAÇÃO MENSAL ENTRE BASES DE DADOS x REFERÊNCIA")
+    st.markdown('#### PERÍODO: 1981-2016')
 
     # st.write(pd.DataFrame(correl, index=obs_names[1:]))
 
@@ -87,6 +88,7 @@ def main():
 
         correl[b] = corr_data.values
 
-    st.markdown('### DADOS x REFERÊNCIA - 1981-2016 - ANUAL')
+    st.markdown("#### CORRELAÇÃO ANUAL ENTRE BASES DE DADOS x REFERÊNCIA")
+    st.markdown('#### PERÍODO: 1981-2016')
 
     st.table(pd.DataFrame(correl, index=obs_names[1:]).style.applymap(color_negative_red).format("{:.2}"))

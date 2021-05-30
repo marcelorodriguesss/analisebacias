@@ -3,16 +3,16 @@ from typing import List
 def dbobs_names():
     dbobs_names: List[str] = [
         'referencia',
-        # 'xavier',
-        'chirps',
-        'cpc',
-        'cru',
-        'delaware',
-        'gpcc',
+        'precl',
         'cmap',
         'gpcp',
-        'prec',
-        'precl',
+        'gpcc',
+        'delaware',
+        'cpc',
+        'cru',
+        'chirps',
+        # 'xavier',
+        # 'prec',
         # 'merge',
         # 'sa24'
     ]

@@ -204,19 +204,19 @@ def plot_regions(corr_values, fig_title='My Title'):
 
     # leg lado esquerdo
 
-    labels = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10',
-              '11', '12', '13', '14', '15', '16', '17', '18', '19', '20',
-              '21', '22', '23']
+    # labels = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10',
+    #           '11', '12', '13', '14', '15', '16', '17', '18', '19', '20',
+    #           '21', '22', '23']
 
-    lst_leg = []
+    # lst_leg = []
 
-    for i in range(len(labels)):
-        lst_leg.append(mpatches.Rectangle((0, 0), 1, 1, facecolor="k"))
+    # for i in range(len(labels)):
+    #     lst_leg.append(mpatches.Rectangle((0, 0), 1, 1, facecolor="k"))
 
-    ax.legend(lst_leg, labels, fontsize='small',
-              loc='upper right', fancybox=True, bbox_to_anchor=(-0.05, 1.02))
+    # ax.legend(lst_leg, labels, fontsize='small',
+    #           loc='upper right', fancybox=True, bbox_to_anchor=(-0.05, 1.02))
 
-    plt.gca().add_artist(legend1)
+    # plt.gca().add_artist(legend1)
 
     # '1': (-65, -15),
     dict_pos = {

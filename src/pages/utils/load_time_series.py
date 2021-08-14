@@ -4,7 +4,7 @@ import streamlit as st
 from src.pages.utils.data import dbobs_names
 
 @st.cache()
-def load_time_series(start_date: str = '1981-01', end_date:str = '2016-12') -> pd.DataFrame:
+def load_time_series(start_date: str = '1981-01', end_date: str = '2016-12') -> pd.DataFrame:
     dfs = pd.DataFrame()
     for n in dbobs_names():
         csv_file = f'data/month/{n}_bacias.csv'
@@ -17,7 +17,7 @@ def load_time_series(start_date: str = '1981-01', end_date:str = '2016-12') -> p
 
 
 @st.cache()
-def compute_yr_accum(start_date: str = '1981-01', end_date:str = '2016-12') -> pd.DataFrame:
+def compute_yr_accum(start_date: str = '1981-01', end_date: str = '2016-12') -> pd.DataFrame:
     dfs = pd.DataFrame()
     for n in dbobs_names():
         csv_file = f'data/month/{n}_bacias.csv'
@@ -44,7 +44,7 @@ def compute_yr_accum(start_date: str = '1981-01', end_date:str = '2016-12') -> p
 
 
 @st.cache()
-def compute_clim_mon(start_date: str = '1981-01', end_date:str = '2016-12') -> pd.DataFrame:
+def compute_clim_mon(start_date: str = '1981-01', end_date: str = '2016-12') -> pd.DataFrame:
 
     dfs = pd.DataFrame()
 

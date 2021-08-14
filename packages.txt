@@ -4,3 +4,5 @@ libproj-dev
 proj-bin
 proj-data
 netcdf-bin
+libnetcdf-dev
+libnetcdff-dev

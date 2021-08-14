@@ -3,3 +3,4 @@ libgeos++-dev
 libproj-dev
 proj-bin
 proj-data
+netcdf-bin

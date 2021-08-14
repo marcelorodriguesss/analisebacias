@@ -1,9 +1,9 @@
-# numpy
-# scipy
-# pandas
-# xarray
-# netCDF4
-# matplotlib
-# altair
-# shapely --no-binary=shapely
-# cartopy
+numpy
+scipy
+pandas
+xarray
+netCDF4
+matplotlib
+altair
+shapely --no-binary=shapely
+cartopy

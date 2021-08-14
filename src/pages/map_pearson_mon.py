@@ -218,21 +218,21 @@ def plot_regions(corr_values, fig_title='My Title'):
 
     plt.gca().add_artist(legend1)
 
+    # '1': (-65, -15),
     dict_pos = {
-        '1': (-65, -15),
-        '2': (-57, -7),
-        '3': (-53.5, -7),
-        '4': (-49, -7),
-        '5': (-40, -9),
-        '6': (-44.5, -15),
-        '7': (-48, -13),
-        '8': (-49, -15.1),
-        '9': (-55.5, -10.5),
-        '10': (-50.5, -18),
-        '11': (-52.3, -20.5),
-        '12': (-48.5, -20.5),
-        '13': (-50.3, -23.5),
-        '14': (-54.3, -23.5),
+        '1': (-57, -7),
+        '2': (-53.5, -7),
+        '3': (-49, -7),
+        '4': (-40, -9),
+        '5': (-44.5, -15),
+        '6': (-48, -13),
+        '7': (-49, -15.1),
+        '8': (-55.5, -10.5),
+        '9': (-50.5, -18),
+        '10': (-52.3, -20.5),
+        '11': (-48.5, -20.5),
+        '12': (-50.3, -23.5),
+        '13': (-54.3, -23.5),
     }
 
     for key in dict_pos.keys():
@@ -240,70 +240,70 @@ def plot_regions(corr_values, fig_title='My Title'):
         plt.annotate(key, xy=dict_pos[key], xycoords='data',
                       color='white', backgroundcolor='black', size='small')
 
-    plt.annotate('15', xy=(-48.8, -17), xycoords='data', textcoords='data',
+    plt.annotate('14', xy=(-48.8, -17), xycoords='data', textcoords='data',
                  xytext=(-38, -16), color='white', backgroundcolor='black', size='small',
                  arrowprops=dict(arrowstyle= '<|-|>',
                              color='gray',
                              lw=1.,
                              ls='--'))
 
-    plt.annotate('16', xy=(-47.8, -18), xycoords='data', textcoords='data',
+    plt.annotate('15', xy=(-47.8, -18), xycoords='data', textcoords='data',
                  xytext=(-38, -17.5), color='white', backgroundcolor='black', size='small',
                  arrowprops=dict(arrowstyle= '<|-|>',
                              color='gray',
                              lw=1.,
                              ls='--'))
 
-    plt.annotate('17', xy=(-47.3, -19.7), xycoords='data', textcoords='data',
+    plt.annotate('16', xy=(-47.3, -19.7), xycoords='data', textcoords='data',
                 xytext=(-38.5, -19), color='white', backgroundcolor='black', size='small',
                 arrowprops=dict(arrowstyle= '<|-|>',
                             color='gray',
                             lw=1.,
                             ls='--'))
 
-    plt.annotate('18', xy=(-45, -19.9), xycoords='data', textcoords='data',
+    plt.annotate('17', xy=(-45, -19.9), xycoords='data', textcoords='data',
                 xytext=(-39, -20.5), color='white', backgroundcolor='black', size='small',
                 arrowprops=dict(arrowstyle= '<|-|>',
                             color='gray',
                             lw=1.,
                             ls='--'))
 
-    plt.annotate('19', xy=(-45, -21.3), xycoords='data', textcoords='data',
+    plt.annotate('18', xy=(-45, -21.3), xycoords='data', textcoords='data',
                 xytext=(-40, -22), color='white', backgroundcolor='black', size='small',
                 arrowprops=dict(arrowstyle= '<|-|>',
                             color='gray',
                             lw=1.,
                             ls='--'))
 
-    plt.annotate('20', xy=(-45.8, -23), xycoords='data', textcoords='data',
+    plt.annotate('19', xy=(-45.8, -23), xycoords='data', textcoords='data',
                 xytext=(-43, -24), color='white', backgroundcolor='black', size='small',
                 arrowprops=dict(arrowstyle= '<|-|>',
                             color='gray',
                             lw=1.,
                             ls='--'))
 
-    plt.annotate('21', xy=(-48, -23), xycoords='data', textcoords='data',
+    plt.annotate('20', xy=(-48, -23), xycoords='data', textcoords='data',
                 xytext=(-45, -25), color='white', backgroundcolor='black', size='small',
                 arrowprops=dict(arrowstyle= '<|-|>',
                             color='gray',
                             lw=1.,
                             ls='--'))
 
-    plt.annotate('22', xy=(-50, -26), xycoords='data', textcoords='data',
+    plt.annotate('21', xy=(-50, -26), xycoords='data', textcoords='data',
                 xytext=(-47, -27), color='white', backgroundcolor='black', size='small',
                 arrowprops=dict(arrowstyle= '<|-|>',
                             color='gray',
                             lw=1.,
                             ls='--'))
 
-    plt.annotate('23', xy=(-50.5, -28), xycoords='data', textcoords='data',
+    plt.annotate('22', xy=(-50.5, -28), xycoords='data', textcoords='data',
                 xytext=(-48, -29), color='white', backgroundcolor='black', size='small',
                 arrowprops=dict(arrowstyle= '<|-|>',
                             color='gray',
                             lw=1.,
                             ls='--'))
 
-    plt.annotate('24', xy=(-53.5, -29), xycoords='data', textcoords='data',
+    plt.annotate('23', xy=(-53.5, -29), xycoords='data', textcoords='data',
                 xytext=(-49, -30.5), color='white', backgroundcolor='black', size='small',
                 arrowprops=dict(arrowstyle= '<|-|>',
                             color='gray',

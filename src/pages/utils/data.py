@@ -20,6 +20,7 @@ def dbobs_names():
 
 
 def basins_names():
+    # 'santo_antonio',
     basins: List[str] = [
         'agua_vermelha',
         'belo_monte',
@@ -36,7 +37,6 @@ def basins_names():
         'rosana',
         'salto_caxias',
         'santa_cecilia',
-        'santo_antonio',
         'sao_luiz_do_tapajos',
         'sao_simao',
         'serra_da_mesa',
